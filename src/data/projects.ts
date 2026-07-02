@@ -6,9 +6,9 @@ import biPlatformAsset from "@/assets/photos/business-intelligence-platform.jpg"
 import nexusBiAsset from "@/assets/photos/bi_intelligence.png";
 import realEstateAiAsset from "@/assets/photos/real-estate_estimator.png";
 import n8nDataAsset from "@/assets/photos/n8n_data_system.webp";
-import n8nApiAgentAsset from "@/assets/projects/n8n_api_agent.asset.json";
-import n8nContentAsset from "@/assets/projects/n8n_content_analysis.asset.json";
-import n8nUserMgmtAsset from "@/assets/projects/n8n_user_management.asset.json";
+import n8nApiAgentAsset from "@/assets/photos/n8n_api_agent.webp";
+import n8nContentAsset from "@/assets/photos/n8n_content_analysis.webp";
+import n8nUserMgmtAsset from "@/assets/photos/n8n_user_management.webp";
 
 export interface Project {
   slug: string;
