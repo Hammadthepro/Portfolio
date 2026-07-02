@@ -68,7 +68,7 @@ export function Navbar() {
 
           <Magnetic className="hidden md:inline-block">
             <a
-              href="/Hammad-Siddiqui-Resume.pdf"
+              href="@/assets/photos/Hammad-Siddiqui-Resume.pdf"
               className="ml-1 inline-flex items-center rounded-full bg-gradient-to-r from-brand-blue to-brand-purple px-4 py-2 text-sm font-medium text-white shadow-[0_0_20px_-5px_rgba(59,130,246,0.7)] hover:shadow-[0_0_30px_-4px_rgba(139,92,246,0.85)] transition"
             >
               Resume
