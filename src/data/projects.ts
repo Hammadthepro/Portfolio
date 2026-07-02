@@ -1,9 +1,8 @@
 import type { ProjectCategory } from "./categories";
 
-import advanceWayAsset from "@/assets/projects/advance_way_logistics.asset.json";
 import beautyKartAsset from "@/assets/photos/beauty_kart.jpg";
-import creticalAsset from "@/assets/projects/cretical_expitide.asset.json";
-import biPlatformAsset from "@/assets/projects/business-intelligence-platform.asset.json";
+import creticalAsset from "@/assets/photos/cretical_expitide.jpg";
+import biPlatformAsset from "@/assets/photos/business-intelligence-platform.jpg";
 import nexusBiAsset from "@/assets/projects/image.asset.json";
 import realEstateAiAsset from "@/assets/projects/image-2.asset.json";
 import n8nDataAsset from "@/assets/projects/n8n_data_system.asset.json";
@@ -58,7 +57,7 @@ export const projects: Project[] = [
     clientType: "Logistics & Freight",
     year: 2025,
     timeline: "Apr 2025 – May 2025",
-    thumbnail: advanceWayAsset.url,
+    thumbnail: "projects/advance_way_logistics.jpg",
     liveUrl: "#",
     featured: true,
   },
