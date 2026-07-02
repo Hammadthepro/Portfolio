@@ -1,7 +1,6 @@
 import type { ProjectCategory } from "./categories";
 
 import advanceWayAsset from "@/assets/projects/advance_way_logistics.asset.json";
-import rapsCoAsset from "@/assets/projects/raps_co.asset.json";
 import beautyKartAsset from "@/assets/projects/beauty_kart.jpg";
 import creticalAsset from "@/assets/projects/cretical_expitide.asset.json";
 import biPlatformAsset from "@/assets/projects/business-intelligence-platform.asset.json";
