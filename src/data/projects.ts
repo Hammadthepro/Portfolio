@@ -4,8 +4,8 @@ import beautyKartAsset from "@/assets/photos/beauty_kart.jpg";
 import creticalAsset from "@/assets/photos/cretical_expitide.jpg";
 import biPlatformAsset from "@/assets/photos/business-intelligence-platform.jpg";
 import nexusBiAsset from "@/assets/photos/bi_intelligence.png";
-import realEstateAiAsset from "@/assets/projects/image-2.asset.json";
-import n8nDataAsset from "@/assets/projects/n8n_data_system.asset.json";
+import realEstateAiAsset from "@/assets/photos/real-estate_estimator.png";
+import n8nDataAsset from "@/assets/photos/n8n_data_system.webp";
 import n8nApiAgentAsset from "@/assets/projects/n8n_api_agent.asset.json";
 import n8nContentAsset from "@/assets/projects/n8n_content_analysis.asset.json";
 import n8nUserMgmtAsset from "@/assets/projects/n8n_user_management.asset.json";
@@ -212,7 +212,7 @@ export const projects: Project[] = [
     clientType: "SaaS / Enterprise",
     year: 2026,
     timeline: "Jun 2026 – Jul 2026",
-    thumbnail: nexusBiAsset.url,
+    thumbnail: nexusBiAsset,
     liveUrl: "#",
     featured: true,
   },
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     clientType: "Real Estate & Construction",
     year: 2026,
     timeline: "Jun 2026",
-    thumbnail: realEstateAiAsset.url,
+    thumbnail: realEstateAiAsset,
     liveUrl: "#",
     featured: true,
   },
@@ -277,7 +277,7 @@ export const projects: Project[] = [
     clientType: "Business Services & Consulting",
     year: 2026,
     timeline: "1–7 days",
-    thumbnail: n8nDataAsset.url,
+    thumbnail: n8nDataAsset,
     liveUrl: "#",
     featured: true,
   },
@@ -306,7 +306,7 @@ export const projects: Project[] = [
     clientType: "Business Services",
     year: 2026,
     timeline: "1–7 days",
-    thumbnail: n8nApiAgentAsset.url,
+    thumbnail: n8nApiAgentAsset,
     liveUrl: "#",
     featured: true,
   },
@@ -335,7 +335,7 @@ export const projects: Project[] = [
     clientType: "Marketing Agency",
     year: 2026,
     timeline: "1–7 days",
-    thumbnail: n8nContentAsset.url,
+    thumbnail: n8nContentAsset,
     liveUrl: "#",
     featured: true,
   },
@@ -364,7 +364,7 @@ export const projects: Project[] = [
     clientType: "HR & Recruiting Services",
     year: 2026,
     timeline: "1–7 days",
-    thumbnail: n8nUserMgmtAsset.url,
+    thumbnail: n8nUserMgmtAsset,
     liveUrl: "#",
     featured: true,
   },
