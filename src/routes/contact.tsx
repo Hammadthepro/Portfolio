@@ -25,7 +25,7 @@ const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80),
   email: z.string().trim().email("Enter a valid email").max(120),
   company: z.string().trim().max(120).optional().or(z.literal("")),
-  budget: z.string().min(1, "Pick a range"),
+  budget: z.string().trim().min(1, "Please enter your budget"),
   service: z.string().min(1, "Pick a service"),
   message: z.string().trim().min(10, "Tell me a little more (10+ characters)").max(2000),
 });
@@ -50,9 +50,22 @@ function ContactPage() {
         const res = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ ...data, _subject: `New enquiry from ${data.name}` }),
+          body: JSON.stringify({
+            access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+            subject: `New enquiry from ${data.name}`,
+            name: data.name,
+            email: data.email,
+            company: data.company,
+            budget: data.budget,
+            service: data.service,
+            message: data.message,
+          }),
         });
-        if (!res.ok) throw new Error("Request failed");
+        const result = await res.json();
+
+        if (!result.success) {
+          throw new Error(result.message || "Failed to send message");
+        }
       }
       setState("success");
       reset();
@@ -110,15 +123,19 @@ function ContactPage() {
                   <input {...register("company")} className={inputCls} placeholder="Optional" autoComplete="organization" />
                 </Field>
                 <Field label="Budget" error={errors.budget?.message}>
-                  <select {...register("budget")} className={inputCls} defaultValue="">
-                    <option value="" disabled>Select a range</option>
-                    {["< $2k", "$2k – $5k", "$5k – $15k", "$15k – $40k", "$40k+"].map((b) => (
-                      <option key={b} value={b}>{b}</option>
-                    ))}
-                  </select>
+                  <input
+                    {...register("budget")}
+                    className={inputCls}
+                    placeholder="e.g. $5,000, PKR 500,000, or Flexible"
+                    autoComplete="off"
+                  />
                 </Field>
                 <Field label="Service" error={errors.service?.message} className="sm:col-span-2">
-                  <select {...register("service")} className={inputCls} defaultValue="">
+                  <select
+                    {...register("service")}
+                    className={`${inputCls} bg-zinc-900 text-white`}
+                    defaultValue=""
+                  >
                     <option value="" disabled>What can I help with?</option>
                     {serviceList.map((s) => (<option key={s.id} value={s.title}>{s.title}</option>))}
                     <option value="Other">Other</option>
@@ -165,7 +182,7 @@ function ContactPage() {
 }
 
 const inputCls =
-  "w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-brand-blue/60 focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition";
+  "w-full rounded-xl border border-white/10 bg-zinc-900 px-4 py-3 text-sm text-white placeholder:text-gray-400 focus:border-brand-blue/60 focus:outline-none focus:ring-2 focus:ring-brand-blue/30 transition";
 
 function Field({ label, error, children, className = "" }: { label: string; error?: string; children: React.ReactNode; className?: string }) {
   return (
