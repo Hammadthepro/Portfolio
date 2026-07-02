@@ -3,7 +3,7 @@ import type { ProjectCategory } from "./categories";
 import beautyKartAsset from "@/assets/photos/beauty_kart.jpg";
 import creticalAsset from "@/assets/photos/cretical_expitide.jpg";
 import biPlatformAsset from "@/assets/photos/business-intelligence-platform.jpg";
-import nexusBiAsset from "@/assets/projects/image.asset.json";
+import nexusBiAsset from "@/assets/photos/bi_intelligence.png";
 import realEstateAiAsset from "@/assets/projects/image-2.asset.json";
 import n8nDataAsset from "@/assets/projects/n8n_data_system.asset.json";
 import n8nApiAgentAsset from "@/assets/projects/n8n_api_agent.asset.json";
